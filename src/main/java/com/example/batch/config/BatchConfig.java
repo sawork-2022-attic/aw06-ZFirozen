@@ -24,6 +24,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @EnableBatchProcessing
 public class BatchConfig {
 
+    public static String tableName = "All_Beauty";
 
     @Autowired
     public JobBuilderFactory jobBuilderFactory;
@@ -34,7 +35,7 @@ public class BatchConfig {
 
     @Bean
     public ItemReader<JsonNode> itemReader() {
-        return new JsonFileReader("/home/java/meta_Clothing_Shoes_and_Jewelry.json");
+        return new JsonFileReader("D:\\ZFirozen\\大三内容\\软件体系架构\\aw06\\AmazonReviewData2018\\meta_All_Beauty.json");
     }
 
     @Bean
